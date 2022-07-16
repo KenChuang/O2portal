@@ -1,0 +1,40 @@
+<p>{{title}}</p>
+
+<ul>
+  <li (click)="changePage('dashboard')">主畫面</li>
+  <li (click)="changePage('server-management')">Server管理</li>
+  <li (click)="changePage('o-cloud-management')">O-Cloud管理</li>
+  <li (click)="changePage('nf-management')">NF管理</li>
+  <li (click)="changePage('fault-management')">故障管理</li>
+  <li (click)="changePage('performance-management')">效能管理</li>
+  <li (click)="changePage('software-management')">軟體管理</li>
+</ul>
+
+
+<ng-template [ngIf]="page === 'dashboard'">
+  <app-dashboard></app-dashboard>
+</ng-template>
+
+<ng-template [ngIf]="page === 'server-management'">
+  <app-server-management></app-server-management>
+</ng-template>
+
+<ng-template [ngIf]="page === 'o-cloud-management'">
+  <app-o-cloud-management></app-o-cloud-management>
+</ng-template>
+
+<ng-template [ngIf]="page === 'nf-management'">
+  <app-nf-management></app-nf-management>
+</ng-template>
+
+<ng-template [ngIf]="page === 'fault-management'">
+  <app-fault-management></app-fault-management>
+</ng-template>
+
+<ng-template [ngIf]="page === 'performance-management'">
+  <app-performance-management></app-performance-management>
+</ng-template>
+
+<ng-template [ngIf]="page === 'software-management'">
+  <app-software-management></app-software-management>
+</ng-template>

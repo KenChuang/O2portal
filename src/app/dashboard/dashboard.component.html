@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<div>
+  <label>Nodes</label>
+  <span>Total {{systemSummary.totalNodes}}</span>|<span>Used {{systemSummary.usedNodes}}</span>
+
+  pie
+
+</div>
+<div>
+  <label>O-Clouds</label>
+  <span>{{systemSummary.ocloudCount}}</span>
+</div>
+<div>
+  <label>Network Functions</label>
+  <span>{{systemSummary.nfCount}}</span>
+</div>
+<div>
+  <label>Resource Utilization</label>
+  <span>CPU {{systemSummary.cpuUtilized}}</span>
+  <span>Interface {{systemSummary.interfaceUtilized}}</span>
+</div>
+
+<div>
+  <label>O-Cloup List</label>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>DMS counts</th>
+        <th>NF counts</th>
+        <th>Fault counts</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let opt of ocloudSummary">
+        <td>{{opt.name}}</td>
+        <td>{{opt.dmsCount}}</td>
+        <td>{{opt.nfCount}}</td>
+        <td>{{opt.faultCount}}</td>
+        <td (click)="veiw(opt)">放大鏡</td>
+      </tr>
+  </tbody>
+  </table>
+</div>
+
