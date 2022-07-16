@@ -14,6 +14,7 @@ import { FaultManagementComponent } from './fault-management/fault-management.co
 import { PerformanceManagementComponent } from './performance-management/performance-management.component';
 import { SoftwareManagementComponent } from './software-management/software-management.component';
 import { MainComponent } from './main/main.component';
+import { DxCircularGaugeModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MainComponent } from './main/main.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    DxCircularGaugeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

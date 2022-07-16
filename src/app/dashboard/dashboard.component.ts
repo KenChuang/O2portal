@@ -29,6 +29,8 @@ export class DashboardComponent implements OnInit {
 
   systemSummary: SystemSummary = {};
   ocloudSummary: OcloudSummary[] = [];
+  utilizationPercent: number = 0;
+
 
   constructor(private http: HttpClient) { }
 
@@ -43,6 +45,7 @@ export class DashboardComponent implements OnInit {
     if (this.isLocal) {
       /* local file test */
       this.systemSummary = systemSummary();
+      this.systemSummaryDeal();
 
     } else {
       const url = 'http://211.20.94.210:8080/querySystemSummary';
@@ -51,27 +54,37 @@ export class DashboardComponent implements OnInit {
           console.log('getSystemSummary:');
           console.log(res);
           this.systemSummary = res;
+          this.systemSummaryDeal();
         }
       );
     }
+  }
+
+  systemSummaryDeal() {
+    this.utilizationPercent = Math.floor((Number(this.systemSummary.usedNodes) / Number(this.systemSummary.totalNodes)) * 100);
   }
 
   getOcloudSummary() {
     if (this.isLocal) {
       /* local file test */
       this.ocloudSummary = ocloudSummary();
-      this.ocloudSummary.forEach((row) => {
-        row.ocloudSummary = row;
-      });
+      this.ocloudSummaryDeal();
     } else {
       const url = 'http://211.20.94.210:8080/queryOcloudSummary';
       this.http.get(url).subscribe(
         res => {
           console.log('getOcloudSummary:');
           console.log(res);
+          this.ocloudSummaryDeal();
         }
       );
     }
+  }
+
+  ocloudSummaryDeal() {
+    this.ocloudSummary.forEach((row) => {
+      row.ocloudSummary = row;
+    });
   }
 
   veiw(ocloudSummary: OcloudSummary) {
