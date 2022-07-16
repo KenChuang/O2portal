@@ -15,6 +15,8 @@ import { PerformanceManagementComponent } from './performance-management/perform
 import { SoftwareManagementComponent } from './software-management/software-management.component';
 import { MainComponent } from './main/main.component';
 import { DxCircularGaugeModule } from 'devextreme-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { DxCircularGaugeModule } from 'devextreme-angular';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    DxCircularGaugeModule
+    DxCircularGaugeModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

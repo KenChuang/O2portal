@@ -1,13 +1,13 @@
 <p>{{title}}</p>
 
 <ul>
-  <li (click)="changePage('dashboard')">主畫面</li>
-  <li (click)="changePage('server-management')">Server管理</li>
-  <li (click)="changePage('o-cloud-management')">O-Cloud管理</li>
-  <li (click)="changePage('nf-management')">NF管理</li>
-  <li (click)="changePage('fault-management')">故障管理</li>
-  <li (click)="changePage('performance-management')">效能管理</li>
-  <li (click)="changePage('software-management')">軟體管理</li>
+  <li (click)="changePage('dashboard')" class="{{page === 'dashboard'?'active':''}}">主畫面</li>
+  <li (click)="changePage('server-management')" class="{{page === 'server-management'?'active':''}}">Server管理</li>
+  <li (click)="changePage('o-cloud-management')" class="{{page === 'o-cloud-management'?'active':''}}">O-Cloud管理</li>
+  <li (click)="changePage('nf-management')" class="{{page === 'nf-management'?'active':''}}">NF管理</li>
+  <li (click)="changePage('fault-management')" class="{{page === 'fault-management'?'active':''}}">故障管理</li>
+  <li (click)="changePage('performance-management')" class="{{page === 'performance-management'?'active':''}}">效能管理</li>
+  <li (click)="changePage('software-management')" class="{{page === 'software-management'?'active':''}}">軟體管理</li>
 </ul>
 
 
