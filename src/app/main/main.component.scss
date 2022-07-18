@@ -1,3 +1,184 @@
-.active{
-  color:#FF0000
+/* css reset start */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    font-size: 1em;
+    font-family:serif,sans-serif,cursive,fantasy,monospace;
+    scroll-padding: 50px 0 0 50px;
+}
+div {
+    overscroll-behavior: contain;
+  }
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+button {
+    cursor: pointer;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*css reset end*/
+
+
+.wrap {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0d3782+0,180ea0+100 */
+background: rgb(13,55,130); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(13,55,130,1) 0%, rgba(24,14,160,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(13,55,130,1) 0%,rgba(24,14,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #071226 0%, #000000 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d3782', endColorstr='#180ea0',GradientType=1 ); /* IE6-9 */
+
+color: #fff;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    padding: 0.3em 0 0.1em;
+    margin: 0 0 0.5em 0;
+    font-weight: m;
+    font-style: italic;
+    color: #97b1c7;
+    background-color: #1d61a1;
+    box-shadow: 0 0 5px #000;
+}
+h1 img {
+    height: 1.5em;
+    width: auto;
+    vertical-align: sub;
+    margin: 0 0.5em .2em .7em;
+}
+h1 button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #5c95c5;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    line-height: 0em;
+}
+.menu,.content {
+    display: inline-block;
+    vertical-align: top;
+}
+.menu {
+    width: 15%;
+    opacity: .85;
+}
+.menu ul li {
+    padding: 1em;
+    cursor: pointer;
+    font-size: 135%;
+    color: #7c98cb;
+    transition: all .25s;
+}
+.menu ul li.active {
+    color: #fff;
+    padding-left: 2em;
+}
+.content {
+    width: 84%;
+}
+.content > div {
+    display: inline-block;
+}
+.menu ul li .mat-icon {
+    display: inline-block;
+    margin: 0 .5em 0 0;
+    vertical-align: bottom;
+    opacity: .5;
+}
+.menu ul li.active .mat-icon  {
+    color: #2f8ce3;
+    opacity: 1;
 }
