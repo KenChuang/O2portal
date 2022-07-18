@@ -1,38 +1,48 @@
-<div>
-  <label>Nodes</label>
-  <span>Total {{systemSummary.totalNodes}}</span>|<span>Used {{systemSummary.usedNodes}}</span>
+<div class="dashboard">
 
-  <dx-circular-gauge id="gauge" [value]="utilizationPercent">
-    <dxo-scale [startValue]="0" [endValue]="100" [tickInterval]="10">
-      <dxo-label [useRangeColors]="true"></dxo-label>
-    </dxo-scale>
-    <dxo-range-container palette="pastel">
-      <dxi-range [startValue]="0" [endValue]="90" color="#4FFF4F"></dxi-range>
-      <dxi-range [startValue]="90" [endValue]="95" color="#FFC14F"></dxi-range>
-      <dxi-range [startValue]="95" [endValue]="100" color="#FF3B3B"></dxi-range>
-    </dxo-range-container>
-    <dxo-title text="Utilization {{utilizationPercent}}%">
-      <dxo-font [size]="28"></dxo-font>
-    </dxo-title>
-  </dx-circular-gauge>
+  <div class="leftArea">
+    <div class="nodes">
+      <label class="boxTitle">Nodes</label>
+      <span><label class="unit">Total</label><label class="bigValue">{{systemSummary.totalNodes}}</label></span>
+      <span><label  class="unit">Used</label><label class="bigValue">{{systemSummary.usedNodes}}</label></span>
+      <div class="chart">
+        <dx-circular-gauge id="gauge" [value]="utilizationPercent">
+          <dxo-scale [startValue]="0" [endValue]="100" [tickInterval]="10">
+            <dxo-label [useRangeColors]="true"></dxo-label>
+          </dxo-scale>
+          <dxo-range-container palette="pastel">
+            <dxi-range [startValue]="0" [endValue]="90" color="#4FFF4F"></dxi-range>
+            <dxi-range [startValue]="90" [endValue]="95" color="#FFC14F"></dxi-range>
+            <dxi-range [startValue]="95" [endValue]="100" color="#FF3B3B"></dxi-range>
+          </dxo-range-container>
+          <dxo-title text="Utilization {{utilizationPercent}}%">
+            <dxo-font [size]="30"></dxo-font>
+          </dxo-title>
+        </dx-circular-gauge>
+      </div>
+    </div>
+  </div>
 
-</div>
-<div>
-  <label>O-Clouds</label>
-  <span>{{systemSummary.ocloudCount}}</span>
-</div>
-<div>
-  <label>Network Functions</label>
-  <span>{{systemSummary.nfCount}}</span>
-</div>
-<div>
-  <label>Resource Utilization</label>
-  <span>CPU {{systemSummary.cpuUtilized}}</span>
-  <span>Interface {{systemSummary.interfaceUtilized}}</span>
+<div class="rightArea">
+  <div>
+    <label  class="boxTitle">O-Clouds</label>
+    <span class="bigValue">{{systemSummary.ocloudCount}}</span>
+  </div>
+
+  <div>
+    <label class="boxTitle">Network Functions</label>
+    <span class="bigValue">{{systemSummary.nfCount}}</span>
+  </div>
+
+  <div class="resource">
+    <label class="boxTitle">Resource Utilization</label>
+    <span><label class="unit">CPU</label><label class="bigValue">{{systemSummary.cpuUtilized}}</label></span>
+    <span><label class="unit">Interface</label><label class="bigValue">{{systemSummary.interfaceUtilized}}</label></span>
+  </div>
 </div>
 
-<div>
-  <label>O-Cloup List</label>
+<div class="table">
+  <label class="boxTitle">O-Cloup List</label>
   <table>
     <thead>
       <tr>
@@ -51,8 +61,43 @@
         <td>{{opt.faultCount}}</td>
         <td (click)="veiw(opt)"><mat-icon>search</mat-icon></td>
       </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
   </tbody>
   </table>
 </div>
 
-
+</div>
