@@ -1,40 +1,50 @@
-<p>{{title}}</p>
+<div class="wrap">
+  <h1><img src="../assets/img/logo.png"> O-Cloud Manageemnt
+    <!--{{title}}-->
+    <button><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <span class="material-symbols-outlined">logout</span>
+    </button>
+  </h1>
+  <div class="menu">
+    <ul>
+      <li (click)="changePage('dashboard')" class="{{page === 'dashboard'?'active':''}}"><mat-icon>dashboard</mat-icon>主畫面</li>
+      <li (click)="changePage('server-management')" class="{{page === 'server-management'?'active':''}}"><mat-icon>dns</mat-icon>Server 管理</li>
+      <li (click)="changePage('o-cloud-management')" class="{{page === 'o-cloud-management'?'active':''}}"><mat-icon>cloud</mat-icon>O-Cloud 管理</li>
+      <li (click)="changePage('nf-management')" class="{{page === 'nf-management'?'active':''}}"><mat-icon><!--speaker_phone-->router</mat-icon>NF 管理</li>
+      <li (click)="changePage('fault-management')" class="{{page === 'fault-management'?'active':''}}"><mat-icon>fmd_bad</mat-icon>故障管理</li>
+      <li (click)="changePage('performance-management')" class="{{page === 'performance-management'?'active':''}}"><mat-icon>trending_up</mat-icon>效能管理</li>
+      <li (click)="changePage('software-management')" class="{{page === 'software-management'?'active':''}}"><mat-icon>display_settings</mat-icon>軟體管理</li>
+    </ul>
+  </div>
+  <div class="content">
+    
+    <ng-template [ngIf]="page === 'dashboard'">
+      <app-dashboard></app-dashboard>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'server-management'">
+      <app-server-management></app-server-management>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'o-cloud-management'">
+      <app-o-cloud-management></app-o-cloud-management>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'nf-management'">
+      <app-nf-management></app-nf-management>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'fault-management'">
+      <app-fault-management></app-fault-management>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'performance-management'">
+      <app-performance-management></app-performance-management>
+    </ng-template>
+    
+    <ng-template [ngIf]="page === 'software-management'">
+      <app-software-management></app-software-management>
+    </ng-template>
 
-<ul>
-  <li (click)="changePage('dashboard')" class="{{page === 'dashboard'?'active':''}}">主畫面</li>
-  <li (click)="changePage('server-management')" class="{{page === 'server-management'?'active':''}}">Server管理</li>
-  <li (click)="changePage('o-cloud-management')" class="{{page === 'o-cloud-management'?'active':''}}">O-Cloud管理</li>
-  <li (click)="changePage('nf-management')" class="{{page === 'nf-management'?'active':''}}">NF管理</li>
-  <li (click)="changePage('fault-management')" class="{{page === 'fault-management'?'active':''}}">故障管理</li>
-  <li (click)="changePage('performance-management')" class="{{page === 'performance-management'?'active':''}}">效能管理</li>
-  <li (click)="changePage('software-management')" class="{{page === 'software-management'?'active':''}}">軟體管理</li>
-</ul>
-
-
-<ng-template [ngIf]="page === 'dashboard'">
-  <app-dashboard></app-dashboard>
-</ng-template>
-
-<ng-template [ngIf]="page === 'server-management'">
-  <app-server-management></app-server-management>
-</ng-template>
-
-<ng-template [ngIf]="page === 'o-cloud-management'">
-  <app-o-cloud-management></app-o-cloud-management>
-</ng-template>
-
-<ng-template [ngIf]="page === 'nf-management'">
-  <app-nf-management></app-nf-management>
-</ng-template>
-
-<ng-template [ngIf]="page === 'fault-management'">
-  <app-fault-management></app-fault-management>
-</ng-template>
-
-<ng-template [ngIf]="page === 'performance-management'">
-  <app-performance-management></app-performance-management>
-</ng-template>
-
-<ng-template [ngIf]="page === 'software-management'">
-  <app-software-management></app-software-management>
-</ng-template>
+  </div>
+</div>
