@@ -1,5 +1,5 @@
 <div class="wrap">
-  <h1><img src="../assets/img/logo.png"> O-Cloud Manageemnt
+  <h1><img src="assets/img/logo.png"> O-Cloud Manageemnt
     <!--{{title}}-->
     <button><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       <span class="material-symbols-outlined">logout</span>
@@ -17,31 +17,31 @@
     </ul>
   </div>
   <div class="content">
-    
+
     <ng-template [ngIf]="page === 'dashboard'">
       <app-dashboard></app-dashboard>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'server-management'">
       <app-server-management></app-server-management>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'o-cloud-management'">
       <app-o-cloud-management></app-o-cloud-management>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'nf-management'">
       <app-nf-management></app-nf-management>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'fault-management'">
       <app-fault-management></app-fault-management>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'performance-management'">
       <app-performance-management></app-performance-management>
     </ng-template>
-    
+
     <ng-template [ngIf]="page === 'software-management'">
       <app-software-management></app-software-management>
     </ng-template>
